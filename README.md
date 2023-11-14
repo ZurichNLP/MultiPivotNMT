@@ -1,13 +1,14 @@
 # Multi-Pivoting in Multilingual Machine Translation
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-red.svg)](#python)
+[![arxiv](https://img.shields.io/badge/arXiv-2311.07439-b31b1b.svg)](https://arxiv.org/abs/2311.07439)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 <p align="center">
   <img src="logo.png" width="500"/>
 </p>
 
-This repository implements multi-pivoting methods for multilingual MT task, as described in [Mohammadshahi et al. (2023)]().
+This repository implements multi-pivoting methods for multilingual MT task, as described in [Mohammadshahi et al. (2023)](https://arxiv.org/abs/2311.07439).
 
 In direct translation, the score of a translation $Y$ given a source sequence $X_{src}$ is computed as $s(Y;X_{src})$ = $\sum_{i} log p(y_i|y_{< i},X_{src})$ where $p(y_i|y_{< i},X)$ is the predicted probability of the $i$-th target token $y_i$ given the previous tokens $y_{< i}$ and the source sequence $X_{src}$.  
 
@@ -63,9 +64,12 @@ sacrebleu ref.txt < pred.txt --tokenize spm
 ## Reference
 
 ```bibtex
-@article{mohammadshahi-et-al-2023-multipivot,
-      title={Investigating Multi-Pivot Ensembling with Massively Multilingual Machine Translation Models}, 
-      author={Alireza Mohammadshahi and Jannis Vamvas and Rico Sennrich},
-      year={2023}
+@misc{mohammadshahi2023investigating,
+    title={Investigating Multi-Pivot Ensembling with Massively Multilingual Machine Translation Models},
+    author={Alireza Mohammadshahi and Jannis Vamvas and Rico Sennrich},
+    year={2023},
+    eprint={2311.07439},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
 }
 ```
